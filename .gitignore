@@ -1,0 +1,20 @@
+# Django stuff #
+################
+*.log
+.static_storage/
+.media/
+local_settings.py
+
+# Settings folder for a django databases #
+##########################################
+footballsite/settings.py
+
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite3
+
+# private binatry folders#
+##########################
+__pycache__/
