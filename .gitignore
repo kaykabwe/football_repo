@@ -17,4 +17,4 @@ footballsite/settings.py
 
 # private binatry folders#
 ##########################
-__pycache__/
+*/__pycache__/
