@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 
 class LeagueTable(models.Model):
-    position
+    position = models.IntegerField
     team_name = models.CharField(max_length=60)
     matches_played = models.IntegerField
     lost = models.IntegerField
