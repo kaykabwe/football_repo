@@ -10,7 +10,9 @@ class Team(models.Model):
     est_date = models.DateTimeField('established date')
 
     def __str__(self):
-        return self.name
+        description = "{0}, {1}, email as {2}, {3}, {4}".format(self.name, 
+            self.city, self.email, self.address, self.est_date)
+        return description
 
 class LeagueTable(models.Model):
     position = models.IntegerField(db_index=True)
@@ -35,3 +37,6 @@ class News(models.Model):
     
     def __str__(self):
         return self.news_id
+
+    def date_published(self):
+        return (self.date_issued)
