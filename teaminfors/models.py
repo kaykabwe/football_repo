@@ -15,12 +15,12 @@ class Team(models.Model):
 class LeagueTable(models.Model):
     position = models.IntegerField(db_index=True)
     team_name = models.ForeignKey(Team, on_delete=models.CASCADE)
-    matches_played = models.IntegerField(null=False)    # null is false by default
-    lost = models.IntegerField(null=False)
-    drawn = models.IntegerField(null=False)
-    won = models.IntegerField(null=False)
-    goals_for = models.IntegerField(null=False)
-    goals_against = models.IntegerField(null=False)
+    matches_played = models.IntegerField(null=False, default=0)    # null is false by default
+    lost = models.IntegerField(null=False, default=0)
+    drawn = models.IntegerField(null=False, default=0)
+    won = models.IntegerField(null=False, default=0)
+    goals_for = models.IntegerField(null=False, default=0)
+    goals_against = models.IntegerField(null=False, default=0)
 
     # to show readable string of class 
     def __str__(self):
