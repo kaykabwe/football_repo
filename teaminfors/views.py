@@ -23,7 +23,7 @@ def details(request, team = "kaunda FC"):
     return HttpResponse(response % team)
 
 def newscorner(request):
-    introduction = "Latest news in League"
+    introduction = "Latest news in League. Thanks!!"
     return HttpResponse(introduction)
 
 def get_name(request):
@@ -37,10 +37,10 @@ def get_name(request):
             # process the data in form.cleaned_data as required
             # ...
             # redirect to a new URL:
-            return HttpResponseRedirect('/thanks/')
+            return HttpResponseRedirect('./thanks/')
 
     # if a GET (or any other method) we'll create a blank form
     else:
         form = NameForm()
     
-    return render(request, 'name.html', {'form': form})
+    return render(request, 'teaminfors/name.html', {'form': form})
