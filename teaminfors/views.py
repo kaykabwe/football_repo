@@ -13,6 +13,7 @@ class IndexView(generic.ListView):
     template_name = 'teaminfors/index.html'
     context_object_name = 'test_dict'
 '''
+# page 33 A render() shortcut
 def index(request):
     test_string = "Zambia football test"
     context = {'test': test_string,}
