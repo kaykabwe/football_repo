@@ -19,7 +19,16 @@ footballsite/settings.py
 *.sql
 *.sqlite3
 
+# Settings folder for a django databases #
+##########################################
+footballsite/settings.py
+
 # private binary folders#
 ##########################
 teaminfors/__pycache__/
 teaminfors/migrations/
+
+# private folders and files for local user #
+##########################################
+data_entry/static/data_entry/sources
+*.pyc

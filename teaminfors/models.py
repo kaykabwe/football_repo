@@ -2,10 +2,34 @@ from django.db import models
 
 # Create your models here.
 
+lusaka = 'Lusaka Province'
+copperbelt = 'Copperbelt Province'
+eastern = 'Easten Province'
+luapula = 'Luapula Province'
+muchinga = 'Muchinga Province'
+north_western = 'North Westen Province'
+northern = 'Northern Province'
+southern = 'Southern Province'
+western = 'Western Province'
+
+PROVINCES_ZAMBIA = (
+    (lusaka, 'Lusaka Province'),
+    (copperbelt, 'Copperbelt Province'),
+    (eastern, 'Easten Province'),
+    (luapula, 'Luapula Province'),
+    (muchinga, 'Muchinga Province'),
+    (north_western, 'North Westen Province'),
+    (northern, 'Northern Province'),
+    (southern, 'Southern Province'),
+    (western, 'Western Province')
+)
+
 class Team(models.Model):
     name = models.CharField(max_length=80, primary_key=True)
     city = models.CharField(max_length=20)
     email = models.EmailField(unique=True)
+    location_province = models.CharField('province', max_length=100, 
+        choices=PROVINCES_ZAMBIA, default="")
     address = models.TextField()
     est_date = models.DateTimeField('established date')
 
